@@ -19,12 +19,13 @@ Welcome to **NoCodeExplorer**!
 This is a simple data exploration app that takes a dataset and lets you analyze and plot its numerical variables.  
 Here on the homepage you can do the following steps:
 
-- Upload your data file (CSV or Excel) on the sidebar  
-- Choose the header row and sheet name (for an Excel File) or the delimiter (for CSV Files)  
-- Explore your raw and cleaned data with a short little preview  
-- Check if the variables of your data have been assigned correctly (*numerical* or *categorical*)
-- Go to the other pages to explore your data further (e.g. univariate analysis, scatterplot, etc.)
-- If you want to start over, just click the reset button on the sidebar
+- **Upload** your data file (**CSV** or **Excel**) on the sidebar  
+- **Choose** the **header row** and **sheet name** (for an Excel File) or the **delimiter** (for CSV Files)  
+- **Explore** your raw and cleaned data with a short little preview  
+- **Download** the cleaned data as a CSV file for further analysis
+- **Check** variable assignment (**numerical** or **categorical**)
+- **Go to the other pages** to explore your data further (e.g. univariate analysis, scatterplot, etc.)
+- **Start over** by just clicking the **reset button** on the sidebar
 
 You can use the sidebar to reset the app or navigate to other pages. And dont worry, you dont need to be a data scientist to use this app!  
 We will guide you through the process of data exploration step by step and explain everything you need to know.  
@@ -168,6 +169,10 @@ if uploaded_file: # and "raw_df" not in st.session_state:
         # Display cleaned DataFrame
         # st.write(df.shape[0], "rows and", df.shape[1], "columns")
         st.dataframe(df.head(30))
+        st.download_button(label="Download cleaned data as CSV", 
+                               data=df.to_csv(), 
+                               file_name="clean_data.csv", 
+                               mime="text/csv")
 
         # Optional: kleiner Plot
         # num_cols = df.select_dtypes(include="number").columns.tolist()
