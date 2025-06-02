@@ -19,12 +19,12 @@ Welcome to **NoCodeExplorer**!
 This is a simple data exploration app that takes a dataset and lets you analyze and plot its numerical variables.  
 Here on the homepage you can do the following steps:
 
-- **Upload** your data file (**CSV** or **Excel**) on the sidebar  
-- **Choose** the **header row** and **sheet name** (for an Excel File) or the **delimiter** (for CSV Files)  
+- **Upload** your **CSV** or **Excel** data file on the sidebar  
+- **Choose** the **header row** and **sheet name** (Excel) or the **delimiter** (CSV)  
 - **Explore** your raw and cleaned data with a short little preview  
 - **Download** the cleaned data as a CSV file for further analysis
-- **Check** variable assignment (**numerical** or **categorical**)
-- **Go to the other pages** to explore your data further (e.g. univariate analysis, scatterplot, etc.)
+- **Check** variable assignment **numerical** or **categorical**
+- **Go to the other pages** on the sidebar to explore your data further 
 - **Start over** by just clicking the **reset button** on the sidebar
 
 You can use the sidebar to reset the app or navigate to other pages. And dont worry, you dont need to be a data scientist to use this app!  
